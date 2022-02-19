@@ -32,7 +32,7 @@ namespace AddressBookSystem
                     Email = Email
                 }
             );
-            Console.WriteLine($"{Name} is added");
+            Console.WriteLine($"{Name} is added___________");
         }
     }
 }
