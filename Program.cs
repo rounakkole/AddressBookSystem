@@ -5,16 +5,25 @@ namespace AddressBookSystem
 {
     internal class Program
     {
+        public static ManipulateContact manipulate = new ManipulateContact();
+
         static void Main(string[] args)
         {
             Console.WriteLine("welcome to address book system");
+
+            AddContact();
+            EditContact();
+        }
+
+        public static void AddContact()
+        {
             Console.WriteLine("how many contacts do you want to add?");
             int num = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i <= num; i++)
             {
                 ContactDetails detail = new ContactDetails();
-                ManipulateContact AddContact = new ManipulateContact();
-                AddContact.AddingContact(
+                //ManipulateContact AddNewContact = new ManipulateContact();
+                manipulate.AddingContact(
                     detail.Name = Console.ReadLine(),
                     detail.Address = Console.ReadLine(),
                     detail.City = Console.ReadLine(),
@@ -25,6 +34,15 @@ namespace AddressBookSystem
                     );
 
             }
+        }
+
+        public static void EditContact()
+        {
+            //ContactDetails detail = new ContactDetails();
+            //ManipulateContact EditNewContact = new ManipulateContact();
+            Console.WriteLine("enter name you want edit");
+            string Name = Console.ReadLine();
+            manipulate.EditingContact(Name);
         }
     }
 }

@@ -18,7 +18,7 @@ namespace AddressBookSystem
             string ZipCode,
             string PhoneNumber,
             string Email
-            )
+            ) 
         {
             AddressBookList.Add
                 (new ContactDetails()
@@ -33,6 +33,29 @@ namespace AddressBookSystem
                 }
             );
             Console.WriteLine($"{Name} is added___________");
+        }
+
+
+        public void EditingContact(string Name)
+        {
+            foreach (var contact in AddressBookList)
+            {
+                if (contact.Name.Contains(Name))
+                {
+                    /*Console.WriteLine("plz provide new ");
+                    contact.Address = Console.ReadLine();
+                    Console.WriteLine("plz provide new ");
+                    contact.City = Console.ReadLine();
+                    Console.WriteLine("plz provide new ");
+                    contact.State = Console.ReadLine();
+                    Console.WriteLine("plz provide new ");
+                    contact.ZipCode = Console.ReadLine();*/
+                    Console.WriteLine("plz provide new phone number");
+                    contact.PhoneNumber = Console.ReadLine();
+                    Console.WriteLine("plz provide new email");
+                   contact.Email = Console.ReadLine();
+                }
+            }
         }
     }
 }
