@@ -22,15 +22,29 @@ namespace AddressBookSystem
             int num = Convert.ToInt32(Console.ReadLine());
             for (int i = 1; i <= num; i++)
             {
+                Console.WriteLine("enter name");
+                string Name = Console.ReadLine();
+                Console.WriteLine("enter address");
+                string Address = Console.ReadLine();
+                Console.WriteLine("enter city");
+                string City = Console.ReadLine();
+                Console.WriteLine("enter state");
+                string State = Console.ReadLine();
+                Console.WriteLine("enter zip code");
+                string ZipCode = Console.ReadLine();
+                Console.WriteLine("enter phone number");
+                string PhoneNumber = Console.ReadLine();
+                Console.WriteLine("enter email id");
+                string Email = Console.ReadLine();
                 ContactDetails detail = new ContactDetails();
                 manipulate.AddingContact(
-                    detail.Name = Console.ReadLine(),
-                    detail.Address = Console.ReadLine(),
-                    detail.City = Console.ReadLine(),
-                    detail.State = Console.ReadLine(),
-                    detail.ZipCode = Console.ReadLine(),
-                    detail.PhoneNumber = Console.ReadLine(),
-                    detail.Email = Console.ReadLine()
+                    detail.Name = Name,
+                    detail.Address = Address,
+                    detail.City = City,
+                    detail.State = State,
+                    detail.ZipCode = ZipCode,
+                    detail.PhoneNumber = PhoneNumber,
+                    detail.Email = Email
                     );
             }
         }
