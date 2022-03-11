@@ -16,9 +16,11 @@ namespace AddressBookSystem
         {
             Console.Write($"how many contacts do you want to add: ");
             int num = Convert.ToInt32(Console.ReadLine());
+            
 
             for (int i = 1; i <= num; i++)
             {
+                bool Duplicate = false;
                 Console.Write("enter name: ");
                 string Name = Console.ReadLine();
                 Console.Write("enter address: ");
@@ -34,16 +36,32 @@ namespace AddressBookSystem
                 Console.Write("enter email id: ");
                 string Email = Console.ReadLine();
                 ContactDetails detail = new ContactDetails();
-                MultiAddressBook.Add(BookName+i, manipulate);
-                manipulate.AddingContact(
-                    detail.Name = Name,
-                    detail.Address = Address,
-                    detail.City = City,
-                    detail.State = State,
-                    detail.ZipCode = ZipCode,
-                    detail.PhoneNumber = PhoneNumber,
-                    detail.Email = Email
-                    );
+                MultiAddressBook.Add(BookName + i, manipulate);
+
+                foreach (var contact in manipulate.AddressBookList)
+                {
+                    if (contact.Name.Contains(Name))
+                    {
+                        Duplicate = true;
+                    }
+                }
+                if (!Duplicate)
+                {
+                    manipulate.AddingContact(
+                      detail.Name = Name,
+                      detail.Address = Address,
+                      detail.City = City,
+                      detail.State = State,
+                      detail.ZipCode = ZipCode,
+                      detail.PhoneNumber = PhoneNumber,
+                      detail.Email = Email
+                      );
+                }
+                else
+                {
+                    Console.WriteLine("contact name already exists");
+                    num++;
+                }
             }
         }
 

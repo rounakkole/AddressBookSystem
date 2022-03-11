@@ -9,7 +9,7 @@ namespace AddressBookSystem
     internal class ManipulateContact
     {
 
-        List<ContactDetails> AddressBookList = new List<ContactDetails>();
+        public List<ContactDetails> AddressBookList = new List<ContactDetails>();
 
         //Dictionary<string , ContactOptions> AddressBookList = new Dictionary<string, ContactOptions>();
         //Dictionary<string, ContactOptions> AddressBookList;
@@ -62,7 +62,7 @@ namespace AddressBookSystem
                     contact.PhoneNumber = Console.ReadLine();
                     Console.Write("enter new email id: ");
                     contact.Email = Console.ReadLine();
-                    Console.Write($"{Name}'s Contact is edited______");
+                    Console.WriteLine($"{Name}'s Contact is edited______");
                     break;
                 }
             }
