@@ -66,6 +66,7 @@ namespace AddressBookSystem
                       detail.Email = Email
                       );
                     Console.WriteLine($"{Name}'s Contact is added______");
+                    manipulate.SortingAddressBook();
                 }
                 else
                 {
