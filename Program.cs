@@ -1,4 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
+using AddressBookSystem.Servieces;
 using System;
 
 namespace AddressBookSystem
@@ -12,21 +13,23 @@ namespace AddressBookSystem
             bool Exit = false;
             ContactOptions contactOptions = new ContactOptions();
 
+
             while (Exit == false)
             {
                 Console.Write("enter address book name: ");
                 string BookName = Console.ReadLine();
 
                 contactOptions.AddContact(BookName);
-                contactOptions.EditContact();
+               /* contactOptions.EditContact();
                 contactOptions.DeleteContact();
-                contactOptions.SearchInState();
+                contactOptions.SearchInState();*/
 
                 Console.Write("add another address book? (Y/N): ");
                 String Choise = Console.ReadLine().ToUpper();
                 Exit = Choise == "Y" ? false :  true;
             }
             contactOptions.SortContact();
+            contactOptions.FileWrite();
         }
 
 

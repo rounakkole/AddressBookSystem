@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AddressBookSystem.Servieces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,6 @@ namespace AddressBookSystem
     internal class ContactOptions
     {
         public static Dictionary<string, ManipulateContact> MultiAddressBook = new Dictionary<string, ManipulateContact>();
-
 
         ManipulateContact manipulate = new ManipulateContact();
         public void AddContact(string BookName)
@@ -103,6 +103,11 @@ namespace AddressBookSystem
             manipulate.SortingAddressBook(Option);
         }
 
+        public void FileWrite()
+        {
+            SimpleIO simpleIO = new SimpleIO();
+            simpleIO.SimpleWrite(manipulate.AddressBookList);
+        }
 
     }
 }

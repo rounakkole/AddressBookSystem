@@ -8,7 +8,6 @@ namespace AddressBookSystem
 {
     public class ContactDetails
     {
-
         public string Name { get; set; }
         public string Address { get; set; }
         public string City { get; set; }
@@ -16,5 +15,14 @@ namespace AddressBookSystem
         public string ZipCode { get; set; }
         public string PhoneNumber { get; set; }
         public string Email { get; set; }
+
+
+
+
+        public override string ToString()
+        {
+            return $"{this.Name}  {this.Address}  {this.City}  {this.State}  {this.ZipCode}  {this.PhoneNumber}  {this.Email}";
+        }
+
     }
 }

@@ -113,11 +113,16 @@ namespace AddressBookSystem
             }
             AddressBookList.Sort(sortingClass);
 
-            foreach (var contact in AddressBookList)
+            /*foreach (var contact in AddressBookList)
             {
                 Console.WriteLine($"name: {contact.Name}  city: {contact.City}  state: {contact.State}  zip: {contact.ZipCode}");
-            }
+            }*/
         }
+
+        /*public IEnumerator GetEnumerator()
+        {
+            return ((IEnumerable)AddressBookList).GetEnumerator();
+        }*/
     }
 
     public class SortingClass : IComparer<ContactDetails>
