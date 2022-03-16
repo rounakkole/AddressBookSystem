@@ -105,8 +105,11 @@ namespace AddressBookSystem
 
         public void FileWrite()
         {
-            SimpleIO simpleIO = new SimpleIO();
-            simpleIO.SimpleWrite(manipulate.AddressBookList);
+            /*SimpleIO simpleIO = new SimpleIO();
+            simpleIO.SimpleWrite(manipulate.AddressBookList);*/
+
+            CsvIO csvIO = new CsvIO();
+            csvIO.CsvWrite(manipulate.AddressBookList);
         }
 
     }

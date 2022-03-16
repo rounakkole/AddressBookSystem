@@ -11,9 +11,6 @@ namespace AddressBookSystem
     {
 
         public List<ContactDetails> AddressBookList = new List<ContactDetails>();
-        //Dictionary<string , ContactOptions> AddressBookList = new Dictionary<string, ContactOptions>();
-        //Dictionary<string, ContactOptions> AddressBookList;
-
 
         public void AddingContact
             (
@@ -93,7 +90,6 @@ namespace AddressBookSystem
 
         public void SortingAddressBook(int Option)
         {
-            // IComparer<ContactDetails> comparer = new SortingClass();
             SortingClass sortingClass = new SortingClass();
 
             switch (Option)
@@ -112,17 +108,8 @@ namespace AddressBookSystem
                     break;
             }
             AddressBookList.Sort(sortingClass);
-
-            /*foreach (var contact in AddressBookList)
-            {
-                Console.WriteLine($"name: {contact.Name}  city: {contact.City}  state: {contact.State}  zip: {contact.ZipCode}");
-            }*/
         }
 
-        /*public IEnumerator GetEnumerator()
-        {
-            return ((IEnumerable)AddressBookList).GetEnumerator();
-        }*/
     }
 
     public class SortingClass : IComparer<ContactDetails>
