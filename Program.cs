@@ -20,13 +20,13 @@ namespace AddressBookSystem
                 string BookName = Console.ReadLine();
 
                 contactOptions.AddContact(BookName);
-               /* contactOptions.EditContact();
+                contactOptions.EditContact();
                 contactOptions.DeleteContact();
-                contactOptions.SearchInState();*/
+                contactOptions.SearchInState();
 
                 Console.Write("add another address book? (Y/N): ");
                 String Choise = Console.ReadLine().ToUpper();
-                Exit = Choise == "Y" ? false :  true;
+                Exit = Choise == "Y" ? false : true;
             }
             contactOptions.SortContact();
             contactOptions.FileWrite();

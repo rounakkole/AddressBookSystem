@@ -10,7 +10,7 @@ namespace AddressBookSystem.Servieces
     {
 
         public const string TxtPath = @"C:\Users\rounak\source\repos\AddressBookSystem\Utility\Simple.txt";
-        public void SimpleWrite(List <ContactDetails> AddressBookList)
+        public void SimpleWrite(List<ContactDetails> AddressBookList)
         {
             File.WriteAllText(TxtPath, string.Empty);
             foreach (ContactDetails contact in AddressBookList)

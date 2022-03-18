@@ -1,0 +1,27 @@
+{
+  "Name": "rahul",
+  "Address": "MG road",
+  "City": "pune",
+  "State": "maharashtra",
+  "ZipCode": "123456",
+  "PhoneNumber": "9876543210",
+  "Email": "abc@email"
+}
+{
+  "Name": "sachin",
+  "Address": "MS road",
+  "City": "patna",
+  "State": "MP",
+  "ZipCode": "456789",
+  "PhoneNumber": "3216549870",
+  "Email": "asd@gmail"
+}
+{
+  "Name": "sourav",
+  "Address": "GS chouk",
+  "City": "benglore",
+  "State": "karnataka",
+  "ZipCode": "963258",
+  "PhoneNumber": "147852369*0",
+  "Email": "qwe@yahoo"
+}
